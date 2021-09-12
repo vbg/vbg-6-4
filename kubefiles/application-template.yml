@@ -20,7 +20,7 @@ objects:
         spec:
           containers:
             - name: shopping-cart-${APP_ENVIRONMENT}
-              image: quay.io/${QUAY_USER_OR_GROUP}/do400-deploying-environments:${APP_IMAGE_TAG}
+              image: quay.io/${QUAY_USER_OR_GROUP}/vbg-test-6-4:${APP_IMAGE_TAG}
               imagePullPolicy: Always
               ports:
                 - containerPort: 8080
