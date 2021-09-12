@@ -5,9 +5,9 @@ pipeline {
      }
   }
   environment {
-     RHCT-USER = 'iwrruh'
-     DEPLOYMENT-STAGE = 'vbg-shopping-cart-stage'
-     DEPLOYMENT-PROD = 'vbg-shopping-cart-production' 
+     RHCT_USER = 'iwrruh'
+     DEPLOYMENT_STAGE = 'vbg-shopping-cart-stage'
+     DEPLOYMENT_PROD = 'vbg-shopping-cart-production' 
   }
   stages {
      stage('Tests') {
@@ -49,7 +49,7 @@ pipeline {
          }
          steps {
 	   sh """
-              oc set image deployment ${DEPLOYMENT-STAGE} \
+              oc set image deployment ${DEPLOYMENT_STAGE} \
               shopping-cart-stage=quay.io/${QUAY_USR}/vbg-test-6-4:build-${BUILD_NUMBER} \
               -n ${APP_NAMESPACE} --record
            """
