@@ -6,8 +6,8 @@ pipeline {
   }
   environment {
      RHCT_USER = 'iwrruh'
-     DEPLOYMENT_STAGE = 'vbg-shopping-cart-stage'
-     DEPLOYMENT_PROD = 'vbg-shopping-cart-production' 
+     DEPLOYMENT_STAGE = 'shopping-cart-stage'
+     DEPLOYMENT_PROD = 'shopping-cart-production' 
   }
   stages {
      stage('Tests') {
